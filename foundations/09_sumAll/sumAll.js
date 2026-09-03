@@ -4,18 +4,11 @@ const sumAll = function(a, b) {
     }
 
     let sum = 0;
-    let larger;
-    let smaller;
     if (a > b) {
-        larger = a;
-        smaller = b;
-    }
-    else {
-        larger = b;
-        smaller = a;
+        [a, b] = [b, a];
     }
 
-    for (let i = smaller; i <= larger; i++) {
+    for (let i = a; i <= b; i++) {
         sum += i;
     }
     return sum;
