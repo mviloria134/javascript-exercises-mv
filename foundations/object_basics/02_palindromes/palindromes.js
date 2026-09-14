@@ -1,5 +1,8 @@
-const palindromes = function () {
-
+const palindromes = function (str) {
+    const noPunctuation = str
+        .toLowerCase()
+        .replaceAll(/\W|\s/g, "");
+    return noPunctuation === noPunctuation.split("").reverse().join("");
 };
 
 // Do not edit below this line
